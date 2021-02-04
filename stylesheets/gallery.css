@@ -1,0 +1,251 @@
+body{
+  font-family: 'Merriweather', serif;
+}
+
+/*== Mobile First ==*/
+
+/*Parent navigation element styles*/
+nav{
+  width: 100%;
+  height: 3em;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: rgba(178, 188, 193);
+}
+
+/*Navigation "home" icon styles*/
+#logo{
+  max-height: 3rem;
+  display: block;
+}
+
+/*Hide "nav_toggle" checkbox*/
+#nav_toggle{
+  display: none;
+}
+
+/* "nav_list" will display when "nav_toggle" is checked*/
+#nav_toggle:checked + #nav_list{
+  height: calc(100vh - 3rem);
+}
+
+/* "nav_toggle" checkbox icon*/
+#nav-icon{
+  width: 10%;
+  padding: .5rem 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#nav-img{
+  height: 2rem;
+}
+
+/*Navigation list styles*/
+#nav_list{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 3rem;
+  overflow: hidden;
+  list-style-type: none;
+  text-align: center;
+  font-size: 1.65rem;
+  font-weight: bold;
+  background-color: rgba(178, 188, 193, .98);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: height 0.75s;
+  -o-transition: height 0.75s;
+  transition: height 0.75s;
+}
+.nav_element{
+  padding: 1.5rem 0;
+}
+
+/*Navigation link styles*/
+.nav-link:link{
+  color: black;
+  text-decoration: none;
+}
+.nav-link:visited{
+  color: black;
+}
+
+/*Gallery - display one per row*/
+.row{
+  margin: 4.75em 4.5% 0 4.5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.column{
+  flex: 100%;
+  max-width: 100%;
+}
+.column img{
+  margin-bottom: 1rem;
+  width: 100%;
+  vertical-align: middle;
+}
+
+/*Footer*/
+footer{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  overflow: auto;
+  border-top: 5px solid #203354;
+  color: #404349;
+  background-color: #EEEEEE;
+  text-align: center;
+}
+footer h1{
+  margin: 0;
+  padding: .75rem 0 0 0;
+  color: #aab0b5;
+}
+#contact{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: 'Roboto', sans-serif;
+}
+#contact li{
+  margin-top: 1rem;
+}
+#company{
+  margin: 0;
+  padding: 1rem 0 .5rem 0;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 37.875em){ /*== Tablet ==*/
+  /*Navigation height adjustment*/
+  nav{
+    height: 4em;
+  }
+
+  /*Logo size adjustment*/
+  #logo{
+    max-height: 4rem;
+  }
+
+  /*Navigation icon adjustments*/
+  #nav-icon{
+    width: 8%;
+    padding: .5rem 0;
+  }
+  #nav-img{
+    height: 2.8rem;
+  }
+
+  /*Navigation list adjustments*/
+  #nav_list{
+    top: 4rem;
+    font-size: 1.75rem;
+  }
+  .nav_element{
+    padding: 3rem 0;
+  }
+
+  /*Gallery - display two per row*/
+  .row{
+    margin: 6em 1% 0 1%;
+  }
+  .column{
+    flex: 48%;
+    max-width: 48%;
+    padding: 0 1%;
+  }
+
+}
+
+@media only screen and (min-width: 64em) and (max-height: 1364px){ /*== Desktop ==*/
+  /*Navigation height adjustments*/
+  nav{
+    height: 4em;
+  }
+
+  /*Logo size adjustments*/
+  #logo{
+    max-height: 4rem;
+  }
+
+  /*Hide the navigation menu toggle icon*/
+  #nav-icon{
+    display: none;
+  }
+
+  /*Nav list styles, display as inline*/
+  #nav_list{
+    width: 35%;
+    height: 4rem;
+    justify-content: space-around;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+/*Animated underline using pseudo element and hover transition*/
+  .nav_element::after{
+    content: "";
+    margin: 0 17.5%;
+    padding: 0;
+    width: 65%;
+    transform: scaleX(0);
+    display: block;
+    border-bottom: 2px solid black;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25;
+  }
+  .nav_element:hover::after{
+    transform: scaleX(1);
+  }
+
+  /*Gallery - display four per row*/
+  .row{
+    margin: 6em .5% 0 .5%;
+  }
+  .column{
+    flex: 24%;
+    max-width: 24%;
+    padding: 0 .5%;
+  }
+
+  /*Footer*/
+  footer h1{
+    margin: 0;
+    padding: .75rem 0 0 .75%;
+    text-align: left;
+  }
+  #contact{
+    margin: 0;
+    padding: 0 0 0 .75%;
+    text-align: left;
+  }
+  #contact li{
+    margin-top: 1rem;
+  }
+  #company{
+    margin: 0;
+    padding: 1rem .5% .5rem 0;
+    overflow: hidden;
+    text-align: right;
+  }
+}

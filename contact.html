@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheets/normalize.css">
+  <link rel="stylesheet" href="stylesheets/contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <!--Navigation Menu-->
+  <nav id="nav">
+    <!--Logo-->
+    <a href="index.html"><img src="images/logo_ph.png" alt="your_logo_here" id="logo"></a>
+    <!--Navigation Menu Toggle-->
+    <label for="nav_toggle" id="nav-icon">
+      <img src="images/menu-icon.svg" alt="menu" id="nav-img">
+    </label>
+    <input type="checkbox" id="nav_toggle">
+    <!--Navigation List-->
+    <ul id="nav_list">
+      <li class="nav_element"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav_element"><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li class="nav_element"><a href="contact.html" class="nav-link">Contact</a></li>
+      <li class="nav_element"><a href="about.html" class="nav-link">About</a></li>
+    </ul>
+  </nav>
+
+  <!--Page Header-->
+  <h1 id="page_header">CONTACT</h1>
+
+  <!--Contact Info Div-->
+  <div id="contact_info">
+    <img src="images/location.png" alt="address" height="20" width="20"><p id="address">123 Main Street, USA</p>
+    <img src="images/phone.png" alt="phone" height="20" width="20"><p id="phone">(123) 456-7890</p>
+    <img src="images/email.png" alt="email" height="20" width="20"><p id="email">example@email.com</p>
+  </div>
+
+  <!---Contact Form-->
+  <form action="mailto:rodriguezaxelr@gmail.com?subject=CustomerMessage" method="post" enctype="text/plain">
+    Name:<br>
+    <input type="text" name="name" type="hidden" class="form_input"><br>
+    Email:<br>
+    <input type="email" name="email" type="hidden" class="form_input"><br>
+    Message:<br>
+    <textarea name="message" type="hidden" rows="8" id="message"></textarea><br>
+    <input type="submit" value="Send" id="submit_button">
+  </form>
+
+  <!--Footer-->
+  <footer>
+    <h1>CONTACT</h1>
+    <ul id="contact">
+      <li>PHONE: 123-456-7890</li>
+      <li>EMAIL: example@email.com</li>
+    </ul>
+    <p id="company">&copy; 2019 Company</p>
+  </footer>
+
+</body>
+</html>
